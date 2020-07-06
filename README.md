@@ -8,7 +8,7 @@ This is to be used in CI runners to validate the openapi spec yaml files for the
 To use in GitLab,
 
 ```yaml
-image: gkarthics/swagger-validate:0.0.1
+image: gkarthics/swagger-validate:0.1.0
 
 before_script:
   - swagger-cli -v
@@ -28,7 +28,7 @@ on:
     branches: [ master ]
 jobs:
   build:
-    container: gkarthics/swagger-validate:0.0.1 
+    container: gkarthics/swagger-validate:0.1.0
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
